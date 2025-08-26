@@ -57,16 +57,12 @@
     if(mode === 'light') document.documentElement.classList.add('light');
     else document.documentElement.classList.remove('light');
   }
-  const saved = localStorage.getItem(PREF_KEY);
-  const preferLight = saved ? saved : (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
-  applyTheme(preferLight);
-  themeBtn.textContent = preferLight === 'light' ? '🌙' : '🌞';
-  themeBtn.addEventListener('click', () => {
-    const now = document.documentElement.classList.contains('light') ? 'dark' : 'light';
-    applyTheme(now);
-    localStorage.setItem(PREF_KEY, now);
-    themeBtn.textContent = now === 'light' ? '🌙' : '🌞';
-  });
+  // فرض الوضع المظلم دائمًا
+  const preferLight = 'dark';
+  applyTheme('dark');
+  localStorage.setItem(PREF_KEY, 'dark');
+  themeBtn.textContent = '🌞';
+  themeBtn.style.display = 'none';
 
   // تشغيل الراوتر
   Router.start();
