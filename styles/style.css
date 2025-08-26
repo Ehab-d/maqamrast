@@ -1,0 +1,69 @@
+:root{--bg:#0b0f17;--fg:#eef2f7;--muted:#a9b4c0;--card:#121826;--accent:#7ef0c1;--accent-2:#7aa2ff;--border:#263247;--glow: radial-gradient(1200px 600px at 80% -10%, rgba(51,139,255,.15), transparent 60%), radial-gradient(800px 400px at 10% 10%, rgba(122,243,193,.12), transparent 60%)}
+:root.light{--bg:#fbfdff;--fg:#0d1b2a;--muted:#4a5a6a;--card:#ffffff;--accent:#0bb884;--accent-2:#2a6df4;--border:#e6eef7;--glow: radial-gradient(1200px 600px at 80% -10%, rgba(42,109,244,.10), transparent 60%), radial-gradient(800px 400px at 10% 10%, rgba(11,184,132,.10), transparent 60%)}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:"Cairo",system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,"Helvetica Neue";background:var(--bg);background-image:var(--glow);color:var(--fg);line-height:1.7}
+html{scroll-behavior:smooth}
+.route-enter{opacity:0;transform:translateY(8px);}
+.route-enter-active{opacity:1;transform:translateY(0);transition:opacity .4s ease, transform .4s ease}
+#bg{position:fixed;inset:0;z-index:-1;display:block}
+.container{max-width:1000px;margin:0 auto;padding:0 16px}
+.site-header{position:sticky;top:0;background:linear-gradient( to right, rgba(18,24,38,.85), rgba(18,24,38,.65) );backdrop-filter:saturate(1.2) blur(10px);border-bottom:1px solid var(--border);z-index:10}
+:root.light .site-header{background:linear-gradient( to right, rgba(255,255,255,.9), rgba(255,255,255,.7) )}
+.header-inner{display:flex;align-items:center;gap:16px;min-height:64px}
+.brand{font-weight:700;letter-spacing:.5px;color:var(--fg);text-decoration:none;font-size:20px}
+.nav{margin-inline-start:auto;display:flex;gap:10px}
+.nav-link{color:var(--muted);text-decoration:none;padding:8px 12px;border-radius:10px;transition:all .2s ease}
+.nav-link:hover{color:var(--fg);background:rgba(126,240,193,.18);} 
+.toggle{border:1px solid var(--border);background:var(--card);color:var(--fg);padding:8px 10px;border-radius:10px;cursor:pointer;transition:transform .2s ease}
+.toggle:active{transform:scale(.96)}
+.site-footer{margin-top:48px;border-top:1px solid var(--border);padding:24px 0;color:var(--muted)}
+
+.page{padding:28px 0}
+.page + .page{border-top:1px solid var(--border);margin-top:8px;padding-top:24px}
+.hero{padding:48px 0 12px}
+.hero .title{font-size:40px;margin:0 0 10px;background:linear-gradient( 120deg, var(--accent-2), var(--accent));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero .subtitle{margin:0;color:var(--muted)}
+.page h1{position:relative;padding-bottom:6px}
+.page h1:after{content:"";position:absolute;right:0;left:auto;bottom:0;width:80px;height:3px;border-radius:2px;background:linear-gradient(90deg,var(--accent),transparent)}
+.page h1{margin:0 0 12px;font-size:28px}
+.page p.lead{margin:0 0 24px;color:var(--muted)}
+
+.search-bar{display:flex;gap:8px;margin:12px 0 20px}
+.search-bar input{flex:1;padding:12px 14px;border-radius:12px;border:1px solid var(--border);background:var(--card);color:var(--fg);outline:none}
+.search-bar input:focus{box-shadow:0 0 0 3px rgba(122,162,255,.25)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:6px 0 16px}
+.chip{padding:6px 10px;border:1px solid var(--border);border-radius:999px;color:var(--muted);cursor:pointer;user-select:none;transition:all .2s ease}
+.chip.active{background:var(--accent);color:#062b1e;border-color:transparent}
+.chip:hover{transform:translateY(-1px)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:14px}
+.card{background:linear-gradient( to bottom right, rgba(126,240,193,.08), rgba(126,240,193,.04) ), var(--card);border:1px solid var(--border);border-radius:16px;padding:16px;transition:transform .18s ease, box-shadow .18s ease, background .3s ease}
+.card:hover{transform:translateY(-4px);box-shadow:0 10px 26px rgba(0,0,0,.22)}
+.card h3{margin:0 0 6px;font-size:18px}
+.card .meta{color:var(--muted);font-size:13px}
+.card a{display:inline-block;margin-top:10px;color:var(--accent);text-decoration:none}
+.card a:hover{text-decoration:underline}
+.card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(0,0,0,.18)}
+.card:hover{background:linear-gradient( to bottom right, rgba(126,240,193,.16), rgba(126,240,193,.08) ), var(--card)}
+.card img{transition:transform .35s ease, filter .35s ease}
+.card:hover img{transform:scale(1.02);filter:saturate(1.05)}
+
+/* توحيد اللون بتأثير أنيق موحّد */
+
+/* تلوين للشيبس عند التحويم */
+.chip:hover{background:linear-gradient( to right, rgba(122,162,255,.18), rgba(126,240,193,.18) )}
+
+.detail{display:grid;gap:16px}
+.detail .panel{background:linear-gradient( to bottom right, rgba(122,162,255,.06), rgba(126,240,193,.06) ), var(--card);border:1px solid var(--border);border-radius:16px;padding:16px}
+.panel .actions{display:flex;gap:8px;margin-top:8px}
+.btn{border:1px solid var(--border);background:var(--card);color:var(--fg);padding:8px 12px;border-radius:10px;cursor:pointer}
+.btn:hover{background:linear-gradient( to right, rgba(122,162,255,.12), rgba(126,240,193,.12) )}
+.kv{display:grid;grid-template-columns:140px 1fr;gap:10px;margin:8px 0}
+.kbd{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,monospace;background:#0b1220;color:#cbd5e1;padding:2px 6px;border-radius:6px;border:1px solid #22314a}
+
+/* تركيز واضح لعناصر التحكم للوصولية */
+:focus-visible{outline:3px solid rgba(126,240,193,.45);outline-offset:2px;border-radius:8px}
+
+@media (max-width:640px){.kv{grid-template-columns:1fr}.kv > div:first-child{color:var(--muted)}.nav{display:none}}
+
