@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+  <defs>
+    <linearGradient id="g5" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#6bd6ff"/>
+      <stop offset="100%" stop-color="#9ff7ff"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="#0b0f17"/>
+  <g opacity="0.25">
+    <circle cx="140" cy="90" r="70" fill="url(#g5)"/>
+    <circle cx="660" cy="410" r="120" fill="url(#g5)"/>
+  </g>
+  <g font-family="Cairo, sans-serif" text-anchor="middle" fill="#eef2f7">
+    <text x="400" y="108" font-size="44" style="font-weight:700">مقام كرد</text>
+    <text x="400" y="150" font-size="18" fill="#a9b4c0">بساطة وصفاء حديث</text>
+  </g>
+  <g stroke="#6bd6ff" stroke-width="4" opacity=".8">
+    <polyline points="160,300 260,280 360,290 460,270 560,300 640,295" fill="none"/>
+  </g>
+</svg>
+

@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="480" viewBox="0 0 800 480">
+  <defs>
+    <linearGradient id="g8" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#7AA2FF"/>
+      <stop offset="100%" stop-color="#4cc38a"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="480" fill="#0b0f17"/>
+  <g opacity="0.28">
+    <circle cx="140" cy="120" r="90" fill="url(#g8)"/>
+    <circle cx="700" cy="360" r="120" fill="url(#g8)"/>
+  </g>
+  <g font-family="Cairo, sans-serif" text-anchor="middle" fill="#eef2f7">
+    <text x="400" y="108" font-size="44" style="font-weight:700">مقام سيكاه</text>
+    <text x="400" y="150" font-size="18" fill="#a9b4c0">طرب شرقي على درجة ثلاث أرباع</text>
+  </g>
+  <g stroke="#7AA2FF" stroke-width="4" opacity=".85">
+    <path d="M160 300 Q 280 260 400 300 T 640 300" fill="none"/>
+  </g>
+</svg>
+
