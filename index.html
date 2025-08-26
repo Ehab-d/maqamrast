@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>مقامات الموسيقى العربية | Rast</title>
+  <meta name="description" content="استكشف مقامات الموسيقى العربية مع الخصائص والأمثلة.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+  <canvas id="bg" aria-hidden="true"></canvas>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#/">Rast</a>
+      <nav class="nav">
+        <a href="#/maqamat" class="nav-link">المقامات</a>
+        <a href="#/about" class="nav-link">عن الموقع</a>
+        <a href="#/contact" class="nav-link">تواصل</a>
+      </nav>
+      <button id="themeToggle" aria-label="تبديل الوضع" class="toggle">🌙</button>
+    </div>
+  </header>
+
+  <main id="app" class="container">
+    <!-- يتم حقن الصفحات هنا -->
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© <span id="year"></span> Rast — مقامات الموسيقى العربية</span>
+      <span class="made-by">Made by Ehab</span>
+    </div>
+  </footer>
+
+  <script src="scripts/data/maqamat.js"></script>
+  <script src="scripts/router.js"></script>
+  <script src="scripts/components/maqamList.js"></script>
+  <script src="scripts/components/maqamDetail.js"></script>
+  <script src="scripts/anim.js"></script>
+  <script src="scripts/audio.js"></script>
+  <script src="scripts/app.js"></script>
+</body>
+</html>
+
